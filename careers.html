@@ -49,10 +49,16 @@
     </section>
     <div class="career">
         <div class="career-form">
-            <form action="./careers.php" method="POST" enctype="multipart/form-data">
+            <form id="careerForm" action="https://formsubmit.co/skillsphereventures@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="showCareerThankYouMessage(event)">
+                <!-- Hidden FormSubmit configuration fields -->
+                <input type="hidden" name="_captcha" value="false"> <!-- Disable CAPTCHA -->
+                <input type="hidden" name="_template" value="table"> <!-- Use table layout in email -->
+                
+                <!-- Form fields -->
                 <input type="text" name="name" placeholder="Name" class="career-form-txt" required>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="career-form-phone">
                 <input type="email" name="email" placeholder="Email" class="career-form-email" required>
+                
                 <div class="radio-class">
                     <h2 class="name">Apply For Which Post?</h2>
                     <label class="radio">
@@ -81,16 +87,47 @@
                         Digital Marketer
                     </label>
                 </div>
+                
                 <input type="number" id="experience" name="experience" required placeholder="Years of Experience" class="career-form-experience">
                 <textarea placeholder="Other Details" name="details" class="career-form-txtarea" required></textarea>
+                
                 <div class="file">
                     <h2 class="name">Upload Your Resume</h2>
                     <input class="upload" type="file" name="fileToUpload" accept=".doc,.docx,.pdf"><br><br><br>
                 </div>
+                
                 <input type="submit" value="Submit" name="submit" class="career-form-btn">
             </form>
         </div>
         
+        <!-- Thank You Message -->
+        <div id="thankYouCareerMessage" style="display: none; text-align: center; margin-top: 20px;">
+            <h2>Thank you for applying! We will reach out shortly.</h2>
+        </div>
+    </div>
+    
+    <script>
+        function showCareerThankYouMessage(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+    
+            // Programmatically submit the form using Fetch API
+            const form = document.getElementById("careerForm");
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+            }).then((response) => {
+                if (response.ok) {
+                    // Hide the form and display the thank-you message
+                    form.style.display = "none";
+                    document.getElementById("thankYouCareerMessage").style.display = "block";
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+    </script>
+    
     </div>
 
       <div class="footer">

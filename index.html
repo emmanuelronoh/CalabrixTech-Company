@@ -24,7 +24,9 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"><img src="./images/image.png" alt=""></a>
+        <a href="#" class="logo">
+            <img src="./images/image.svg" alt="Logo">
+        </a>
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
@@ -40,6 +42,7 @@
         </nav>
     </header>
 </body>
+
 </html>
 
   <section id="home" class="home">
@@ -374,14 +377,48 @@
     </div>
     
     <div class="contact-form">
-        <form action="./contactme.php" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/skillsphereventures@gmail.com" method="POST" onsubmit="showThankYouMessage(event)">
+            <!-- Hidden input fields for FormSubmit configuration -->
+            <input type="hidden" name="_captcha" value="false"> <!-- Disable captcha -->
+            <input type="hidden" name="_template" value="table"> <!-- Email layout -->
+    
+            <!-- Visible form fields -->
             <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="contact-form-phone">
             <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
             <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>
             <input type="submit" value="Submit" name="submit" class="contact-form-btn">
         </form>
+    
+        <!-- Thank You Message -->
+        <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 20px;">
+            <h2>Thank you! Your message has been sent successfully. We will reach out immediately</h2>
+        </div>
     </div>
+    
+    <script>
+        function showThankYouMessage(event) {
+            // Prevent default form submission behavior
+            event.preventDefault();
+    
+            // Submit the form programmatically
+            const form = document.getElementById("contactForm");
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+            }).then((response) => {
+                if (response.ok) {
+                    // Hide the form and show the thank-you message
+                    form.style.display = "none";
+                    document.getElementById("thankYouMessage").style.display = "block";
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+    </script>
+    
+    
     </div>
 
     <section class="faq">
