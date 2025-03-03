@@ -20,12 +20,12 @@ try {
     $mail->Host = 'smtp.gmail.com';  // Set the SMTP server to Gmail
     $mail->SMTPAuth = true;
     $mail->Username = 'skillsphereventures@gmail.com';  // Your Gmail address
-    $mail->Password = 'skillsphereventurescompany';  // Your Gmail password or App password
+    $mail->Password = 'CalabrixTechcompany';  // Your Gmail password or App password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // Use TLS encryption
     $mail->Port = 587;  // TCP port to connect to (587 for Gmail)
 
     // Set the sender and recipient
-    $mail->setFrom('skillsphereventures@gmail.com', 'Skillsphere Ventures');  // Update the sender email to your Gmail
+    $mail->setFrom('skillsphereventures@gmail.com', 'CalabrixTech');  // Update the sender email to your Gmail
     $mail->addAddress('skillsphereventures@gmail.com');  // Recipient's email address
 
     // Set the email format to HTML

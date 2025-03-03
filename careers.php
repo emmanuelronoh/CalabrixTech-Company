@@ -68,12 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->Host = 'smtp.gmail.com';  // Set the SMTP server
                 $mail->SMTPAuth = true;
                 $mail->Username = 'skillsphereventures@gmail.com';  // Your Gmail address
-                $mail->Password = 'skillsphereventurescompany';  // Gmail App password (if 2FA enabled)
+                $mail->Password = 'CalabrixTech';  // Gmail App password (if 2FA enabled)
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;  // TCP port for TLS
 
                 // Recipients
-                $mail->setFrom('skillsphereventures@gmail.com', 'Skillsphere Ventures');
+                $mail->setFrom('skillsphereventures@gmail.com', 'CalabrixTech');
                 $mail->addAddress('skillsphereventures@gmail.com');  // Recipient email
 
                 // Content

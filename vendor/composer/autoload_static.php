@@ -13,7 +13,7 @@ class ComposerStaticInitb299d17303e629ef36c433e6d8390978
         ),
         'E' => 
         array (
-            'Emmanuel\\SkillSphere Ventures\\' => 30,
+            'Emmanuel\\CalabrixTech\\' => 30,
         ),
     );
 
@@ -22,7 +22,7 @@ class ComposerStaticInitb299d17303e629ef36c433e6d8390978
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
-        'Emmanuel\\SkillSphere Ventures\\' => 
+        'Emmanuel\\CalabrixTech\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

@@ -1,10 +1,10 @@
-# SkillSphere Ventures Company Website
+# CalabrixTech Company Website
 
-Welcome to the official **SkillSphere Ventures** website repository. This website serves as the digital presence of SkillSphere Ventures, showcasing the company, its mission, services, and providing a professional platform to engage with potential clients.
+Welcome to the official **CalabrixTech** website repository. This website serves as the digital presence of CalabrixTech, showcasing the company, its mission, services, and providing a professional platform to engage with potential clients.
 
 ## Features
 
-- **Company Overview**: Information about SkillSphere Ventures, its history, and core values.
+- **Company Overview**: Information about CalabrixTech, its history, and core values.
 - **Services**: Detailed descriptions of the various services we offer to help businesses grow.
 - **Contact Form**: A contact form for visitors to reach out to us for inquiries or partnerships.
 - **Responsive Design**: A modern and responsive design that adapts seamlessly to both desktop and mobile devices.
@@ -13,7 +13,7 @@ Welcome to the official **SkillSphere Ventures** website repository. This websit
 ## Project Structure
 
 ```plaintext
-SkillSphere-Ventures-Company-Website/
+CalabrixTech-Company-Website/
 │
 ├── assets/             # Static files (images, fonts, etc.)
 │

@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'emmanuel/skillsphereventurescompany',
+        'name' => 'emmanuel/CalabrixTechcompany',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => '54fa12c1e66c026c5ac2996e7b555ebf7e0cc982',
@@ -10,7 +10,7 @@
         'dev' => true,
     ),
     'versions' => array(
-        'emmanuel/skillsphereventurescompany' => array(
+        'emmanuel/CalabrixTechcompany' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'reference' => '54fa12c1e66c026c5ac2996e7b555ebf7e0cc982',
