@@ -1,5 +1,5 @@
 {
-    "name": "emmanuel/skillsphereventurescompany",
+    "name": "emmanuel/CalabrixTechcompany",
     "autoload": {
         "psr-4": {
             "Emmanuel\\CalabrixTech\\": "src/"
