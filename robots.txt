@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://calabrix-tech-company.vercel.app/sitemap.xml
